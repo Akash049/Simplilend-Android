@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:weightSum="10">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_back"
+                android:padding="5dp"
+                android:id="@+id/home_icon"
+                android:tint="@color/white"
+                android:layout_height="match_parent">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="8"
+                android:text="Borrower Employment Details"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:layout_height="match_parent">
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_exit"
+                android:padding="5dp"
+                android:visibility="invisible"
+                android:tint="@color/white"
+                android:layout_height="match_parent">
+
+            </ImageView>
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingRight="20dp"
+            android:orientation="vertical">
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="17dp"
+                android:textAlignment="textStart"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:id="@+id/employment_type"></Spinner>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="17dp"
+                android:hint="Employer / Business Name*"
+                android:id="@+id/business_name"></EditText>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="17dp"
+                android:hint="Designation*"
+                android:id="@+id/designaton_name"></EditText>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="17dp"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:id="@+id/official_address_type"></Spinner>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="17dp"
+                android:hint="Address Line 1"
+                android:id="@+id/address_1"></EditText>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="17dp"
+                android:hint="Address Line 2"
+                android:id="@+id/address_2"></EditText>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="17dp"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:id="@+id/state"></Spinner>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="17dp"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:id="@+id/city"></Spinner>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="17dp"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:id="@+id/district"></Spinner>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="17dp"
+                android:hint="Pincode"
+                android:id="@+id/pincode"></EditText>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="17dp"
+                android:hint="Total annual income from primary source*"
+                android:id="@+id/total_annual_income_from_primary"></EditText>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="17dp"
+                android:hint="Total monthly expense(excluding EMI)"
+                android:id="@+id/total_monthly_expense"></EditText>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="17dp"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:id="@+id/other_sources_of_income"></Spinner>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:weightSum="4">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/minus"
+                    android:id="@+id/delete_new_sources"
+                    android:tint="@color/unselected_red"
+                    android:layout_weight="1"></ImageView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:text="Add new source"
+                    android:textAlignment="center"
+                    android:background="@drawable/rounded_button_brown_bg"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:layout_weight="2"></TextView>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/plus"
+                    android:id="@+id/add_new_sources"
+                    android:tint="@color/default_green"
+                    android:layout_weight="1"></ImageView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/new_sources_container">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Add new source"
+                    android:gravity="center_vertical"
+                    android:textSize="20dp"
+                    android:layout_weight="2"></TextView>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/totol_income"
+                    android:hint="Total income"
+                    android:layout_weight="2"></EditText>
+
+            </LinearLayout>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="17dp"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:id="@+id/co_applicant"></Spinner>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="17dp"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:id="@+id/relationship_with_co_applicant"></Spinner>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:id="@+id/previous"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:layout_margin="15dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/rounded_button_brown_bg"
+                    android:text="Previous"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:id="@+id/next"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:layout_margin="15dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/rounded_button_brown_bg"
+                    android:text="Save and Next"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

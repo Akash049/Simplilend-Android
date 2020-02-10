@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:weightSum="10">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_home"
+                android:padding="5dp"
+                android:id="@+id/home_icon"
+                android:tint="@color/white"
+                android:layout_height="match_parent">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="8"
+                android:text="Category of New Loans"
+                android:textSize="22dp"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:layout_height="match_parent">
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_exit"
+                android:padding="5dp"
+                android:tint="@color/white"
+                android:layout_height="match_parent">
+
+            </ImageView>
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="INDIVIDUAL LOANS"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="22dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical"
+                    android:weightSum="2"
+                    android:id="@+id/msme_loans"
+                    android:padding="0dp"
+                    android:background="@drawable/rounded_button_blue_bg">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1"
+                        android:src="@drawable/msme">
+
+                    </ImageView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical"
+                    android:weightSum="2"
+                    android:padding="0dp"
+                    android:id="@+id/consumer_loans"
+                    android:background="@drawable/rounded_button_blue_bg">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1"
+                        android:src="@drawable/consumer_loan">
+
+                    </ImageView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_height="1.5dp"
+                android:layout_width="match_parent"
+                android:background="@color/light_gray"
+                ></View>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="GROUP LOANS"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="22dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical"
+                    android:weightSum="2"
+                    android:padding="10dp"
+                    android:background="@drawable/rounded_button_blue_bg">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        android:textColor="@color/white"
+                        android:text="JLG Loans"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical"
+                    android:weightSum="2"
+                    android:padding="10dp"
+                    android:background="@drawable/rounded_button_blue_bg">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        android:textColor="@color/white"
+                        android:text="SHG Loans"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_height="1.5dp"
+                android:layout_width="match_parent"
+                android:background="@color/light_gray"
+                ></View>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Customized Loan Products"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="22dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical"
+                    android:weightSum="2"
+                    android:padding="10dp"
+                    android:background="@drawable/rounded_button_blue_bg">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="17dp"
+                        android:textColor="@color/white"
+                        android:text="Diwali Special Loans"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical"
+                    android:weightSum="2"
+                    android:padding="10dp"
+                    android:background="@drawable/rounded_button_blue_bg">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="17dp"
+                        android:textColor="@color/white"
+                        android:text="Dhanteras Special Loans"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical"
+                    android:weightSum="2"
+                    android:padding="10dp"
+                    android:background="@drawable/rounded_button_blue_bg">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="17dp"
+                        android:textColor="@color/white"
+                        android:text="New Year Special Loans"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical"
+                    android:weightSum="2"
+                    android:padding="10dp"
+                    android:background="@drawable/rounded_button_blue_bg">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="17dp"
+                        android:textColor="@color/white"
+                        android:text="Holi Special Loans"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
