@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Active_Loan.Active_Loans"
+           android:theme="@style/NoActionBar"
+            ></activity>
         <activity
             android:name=".Login.Splash"
             android:theme="@style/NoActionBar">
@@ -20,24 +23,19 @@
         </activity>
         <activity
             android:name=".Home.Dashboard"
-            android:theme="@style/NoActionBar">
-        </activity>
+            android:theme="@style/NoActionBar"></activity>
         <activity
             android:name=".Forms.SelectLoanType"
-            android:theme="@style/NoActionBar">
-        </activity>
+            android:theme="@style/NoActionBar"></activity>
         <activity
             android:name=".Login.SignIn"
-            android:theme="@style/NoActionBar">
-        </activity>
+            android:theme="@style/NoActionBar"></activity>
         <activity
             android:name=".Home.LoansCategory"
-            android:theme="@style/NoActionBar">
-        </activity>
+            android:theme="@style/NoActionBar"></activity>
         <activity
             android:name=".Forms.PersonalLoanForm"
-            android:theme="@style/NoActionBar">
-        </activity>
+            android:theme="@style/NoActionBar"></activity>
     </application>
 
 </manifest>
