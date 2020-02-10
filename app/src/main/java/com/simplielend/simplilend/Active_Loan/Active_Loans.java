@@ -55,6 +55,7 @@ public class Active_Loans extends AppCompatActivity {
         a.setStatus_mobile("Unverified");
         a.setPurpose("Medical");
         a.setApproved_amount("100000 INR");
+        a.setImg(R.drawable.ic_person_blue_24dp);
         activeloans.add(a);
 
         a.setName("Ajay Singh");
@@ -62,6 +63,7 @@ public class Active_Loans extends AppCompatActivity {
         a.setStatus_mobile("Unverified");
         a.setPurpose("Medical");
         a.setApproved_amount("100000 INR");
+        a.setImg(R.drawable.ic_person_blue_24dp);
         activeloans.add(a);
 
         a.setName("Ajay Singh");
@@ -69,6 +71,7 @@ public class Active_Loans extends AppCompatActivity {
         a.setStatus_mobile("Unverified");
         a.setPurpose("Medical");
         a.setApproved_amount("100000 INR");
+        a.setImg(R.drawable.ic_person_blue_24dp);
         activeloans.add(a);
 
 
