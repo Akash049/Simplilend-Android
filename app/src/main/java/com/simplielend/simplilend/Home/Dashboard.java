@@ -9,6 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.simplielend.simplilend.Loans.Active_Loans;
+import com.simplielend.simplilend.Loans.ClosedLoans;
 import com.simplielend.simplilend.Loans.Rejected_Loans;
 import com.simplielend.simplilend.R;
 
@@ -18,6 +19,7 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
     LinearLayout newLoanBtn;
     LinearLayout activeloan;
     LinearLayout rejectedloan;
+    LinearLayout closedloans;
 
 
     @Override
@@ -31,6 +33,8 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
         newLoanBtn = (LinearLayout) findViewById(R.id.new_loan_application);
         activeloan=(LinearLayout) findViewById(R.id.active_loans);
         rejectedloan=(LinearLayout)findViewById(R.id.relo);
+        closedloans=(LinearLayout)findViewById(R.id.closed_loans);
+        closedloans.setOnClickListener(this);
         rejectedloan.setOnClickListener(this);
         activeloan.setOnClickListener(this);
         newLoanBtn.setOnClickListener(this);
@@ -50,6 +54,11 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
 
             case R.id.relo:
                 startActivity(new Intent(Dashboard.this, Rejected_Loans.class));
+                break;
+
+            case R.id.closed_loans:
+                startActivity(new Intent(Dashboard.this, ClosedLoans.class));
+                break;
         }
     }
 }

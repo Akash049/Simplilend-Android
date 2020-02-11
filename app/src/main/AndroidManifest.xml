@@ -9,9 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Loans.Rejected_Loans"
+        <activity android:name=".Loans.ClosedLoans"
             android:theme="@style/NoActionBar"
             ></activity>
+        <activity
+            android:name=".Loans.Rejected_Loans"
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".Loans.Active_Loans"
             android:theme="@style/NoActionBar" />
