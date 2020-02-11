@@ -8,7 +8,8 @@ import android.widget.LinearLayout;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.simplielend.simplilend.Active_Loan.Active_Loans;
+import com.simplielend.simplilend.Loans.Active_Loans;
+import com.simplielend.simplilend.Loans.Rejected_Loans;
 import com.simplielend.simplilend.R;
 
 public class Dashboard extends AppCompatActivity implements View.OnClickListener {
@@ -16,6 +17,8 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
     //var
     LinearLayout newLoanBtn;
     LinearLayout activeloan;
+    LinearLayout rejectedloan;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,6 +30,8 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
     public void initialize(){
         newLoanBtn = (LinearLayout) findViewById(R.id.new_loan_application);
         activeloan=(LinearLayout) findViewById(R.id.active_loans);
+        rejectedloan=(LinearLayout)findViewById(R.id.relo);
+        rejectedloan.setOnClickListener(this);
         activeloan.setOnClickListener(this);
         newLoanBtn.setOnClickListener(this);
     }
@@ -42,6 +47,9 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
             case R.id.active_loans:
                 startActivity(new Intent(Dashboard.this, Active_Loans.class));
                 break;
+
+            case R.id.relo:
+                startActivity(new Intent(Dashboard.this, Rejected_Loans.class));
         }
     }
 }

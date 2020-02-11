@@ -1,4 +1,4 @@
-package com.simplielend.simplilend.Active_Loan;
+package com.simplielend.simplilend.Loans;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;

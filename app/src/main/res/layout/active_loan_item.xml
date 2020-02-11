@@ -91,6 +91,7 @@
                 android:text="Applicant"
                 android:textColor="#FFF"
                 android:paddingLeft="10dp"
+                android:paddingTop="2dp"
 
                 ></TextView>
 
@@ -179,6 +180,7 @@
                 android:textColor="#FFF"
                 android:text="Date"
                 android:paddingLeft="10dp"
+                android:paddingTop="2dp"
                 >
 
             </TextView>
