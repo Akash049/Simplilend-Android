@@ -1,8 +1,19 @@
 package com.simplielend.simplilend.Models;
 
 public class rejectedloan {
-    private String rej_name,rej_email,rej_number,rej_purpose,requested_tenure,requested_amount,comment;
+    private String rej_name,rej_email,rej_number,rej_purpose,requested_tenure,requested_amount,comment,loan_type;
+
+
+
     private int img;
+
+    public String getLoan_type() {
+        return loan_type;
+    }
+
+    public void setLoan_type(String loan_type) {
+        this.loan_type = loan_type;
+    }
 
     public String getRej_name() {
         return rej_name;

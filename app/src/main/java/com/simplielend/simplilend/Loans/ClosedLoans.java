@@ -61,6 +61,7 @@ public class ClosedLoans extends AppCompatActivity {
         a.setImg(R.drawable.ic_person_blue_24dp);
         activeloans.add(a);
 
+        a= new Activeloan();
         a.setName("Ajay Singh");
         a.setStatus_email("Unverified");
         a.setStatus_mobile("Unverified");
@@ -69,6 +70,7 @@ public class ClosedLoans extends AppCompatActivity {
         a.setImg(R.drawable.ic_person_blue_24dp);
         activeloans.add(a);
 
+        a= new Activeloan();
         a.setName("Ajay Singh");
         a.setStatus_email("Unverified");
         a.setStatus_mobile("Unverified");

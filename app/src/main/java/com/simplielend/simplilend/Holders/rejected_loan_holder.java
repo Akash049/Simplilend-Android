@@ -18,6 +18,7 @@ public class rejected_loan_holder extends RecyclerView.ViewHolder {
     public TextView requested_amount;
     public TextView requested_tenure;
     public TextView comment;
+    public TextView loan_type;
 
 
     public rejected_loan_holder(@NonNull View itemView) {
@@ -30,6 +31,7 @@ public class rejected_loan_holder extends RecyclerView.ViewHolder {
         this.requested_amount=itemView.findViewById(R.id.requested_amount);
         this.requested_tenure=itemView.findViewById(R.id.requested_tenure);
         this.comment=itemView.findViewById(R.id.comment);
+        this.loan_type=itemView.findViewById(R.id.loan_type);
 
     }
 }

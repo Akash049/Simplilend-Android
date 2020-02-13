@@ -20,6 +20,8 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
     //var
     TextView signinBtn, loginWithOtpBtn, forgotPasswordBtn;
     EditText emailEntry, passwordEntry;
+    TextView logotp,forgot_password;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -36,6 +38,20 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
         signinBtn.setOnClickListener(this);
         emailEntry = (EditText)findViewById(R.id.email_data_entry);
         passwordEntry = (EditText)findViewById(R.id.password_data_entry);
+        forgot_password=findViewById(R.id.forgot_password);
+        forgot_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SignIn.this,ForgotPassword.class));
+            }
+        });
+        logotp=(TextView)findViewById(R.id.log_otp);
+        logotp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SignIn.this, OTPLogin.class));
+            }
+        });
     }
 
     @Override

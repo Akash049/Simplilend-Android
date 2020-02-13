@@ -18,6 +18,11 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven{
+
+            url "http://3.88.131.77:8080/user/send_otp/"
+        }
+
         
     }
 }

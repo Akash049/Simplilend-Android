@@ -45,6 +45,7 @@ public class rejected_loan_adapter extends RecyclerView.Adapter<rejected_loan_ho
         holder.requested_amount.setText(rejectedloans.get(position).getRequested_amount());
         holder.requested_tenure.setText(rejectedloans.get(position).getRequested_tenure());
         holder.img.setImageResource(rejectedloans.get(position).getImg());
+        holder.loan_type.setText(rejectedloans.get(position).getLoan_type());
 
 
 

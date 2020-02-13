@@ -14,6 +14,7 @@ import com.simplielend.simplilend.Loans.ClosedLoans;
 import com.simplielend.simplilend.Loans.DisbursementLoans;
 import com.simplielend.simplilend.Loans.Rejected_Loans;
 import com.simplielend.simplilend.R;
+import com.simplielend.simplilend.Loans.UnderReview;
 
 public class Dashboard extends AppCompatActivity implements View.OnClickListener {
 
@@ -23,7 +24,7 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
     LinearLayout rejectedloan;
     LinearLayout closedloans;
     LinearLayout disburs;
-
+    LinearLayout underev;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,11 +39,13 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
         rejectedloan=(LinearLayout)findViewById(R.id.relo);
         closedloans=(LinearLayout)findViewById(R.id.closed_loans);
         disburs=(LinearLayout)findViewById(R.id.disburs);
+        underev=(LinearLayout)findViewById(R.id.under_review);
         disburs.setOnClickListener(this);
         closedloans.setOnClickListener(this);
         rejectedloan.setOnClickListener(this);
         activeloan.setOnClickListener(this);
         newLoanBtn.setOnClickListener(this);
+        underev.setOnClickListener(this);
     }
 
 
@@ -72,6 +75,11 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
             case R.id.disburs:
                 startActivity(new Intent(Dashboard.this, DisbursementLoans.class));
                 Toast.makeText(getApplicationContext(),"Disbursement Loans",Toast.LENGTH_LONG).show();
+                break;
+
+            case R.id.under_review:
+                startActivity(new Intent(Dashboard.this, UnderReview.class));
+                Toast.makeText(getApplicationContext(),"Under Review Applications",Toast.LENGTH_LONG).show();
                 break;
         }
     }
