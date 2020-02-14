@@ -118,7 +118,7 @@ public class OTPLogin extends AppCompatActivity {
     private void verifyOTP() {
         try {
             requestQueue = Volley.newRequestQueue(this);
-            StringRequest getRequest = new StringRequest(Request.Method.POST, url2, new Response.Listener<String>() {
+            StringRequest getRequest = new StringRequest(Request.Method.POST,url2, new Response.Listener<String>() {
                 @Override
 
                 public void onResponse(String response) {
