@@ -12,6 +12,7 @@ import android.view.textclassifier.ConversationActions;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.NetworkResponse;
@@ -29,14 +30,14 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class OTPLogin extends AppCompatActivity {
+public class OTPLogin extends AppCompatActivity implements View.OnClickListener {
     EditText mob_num,otp;
     Button gen_otp;
     RequestQueue requestQueue;
     String url, url2;
     Button resetpass;
-
     ImageView back;
+    TextView resend;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,26 +48,13 @@ public class OTPLogin extends AppCompatActivity {
         back = findViewById(R.id.back);
         otp=findViewById(R.id.otp);
         mob_num = findViewById(R.id.mobile_number);
+        resend=findViewById(R.id.resend);
+        resend.setOnClickListener(this);
         gen_otp = findViewById(R.id.gen_otp);
         resetpass = findViewById(R.id.resetpass);
-        resetpass.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                verifyOTP();
-            }
-        });
-        gen_otp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getOTP();
-            }
-        });
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(OTPLogin.this, SignIn.class));
-            }
-        });
+        resetpass.setOnClickListener(this);
+        gen_otp.setOnClickListener(this);
+        back.setOnClickListener(this);
     }
 
     private void getOTP() {
@@ -131,7 +119,7 @@ public class OTPLogin extends AppCompatActivity {
                             startActivity(new Intent(OTPLogin.this,ResetPassword.class));
                             Toast.makeText(getApplicationContext(), "OTP verified", Toast.LENGTH_LONG).show();
                         } else {
-                            Toast.makeText(getApplicationContext(), "Server Error", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Incorrect OTP", Toast.LENGTH_SHORT).show();
                         }
 
                     } catch (JSONException e) {
@@ -163,6 +151,28 @@ public class OTPLogin extends AppCompatActivity {
         } catch (Exception e) {
 
         }
+    }
+
+    @Override
+    public void onClick(View v) {
+        int id=v.getId();
+        switch (id)
+        {
+            case R.id.resend:
+                getOTP();
+                 break;
+            case R.id.resetpass:
+                verifyOTP();
+                break;
+            case R.id.gen_otp:
+                getOTP();
+                break;
+            case R.id.back:
+                startActivity(new Intent(OTPLogin.this,SignIn.class));
+                break;
+
+        }
+
     }
 }
 
