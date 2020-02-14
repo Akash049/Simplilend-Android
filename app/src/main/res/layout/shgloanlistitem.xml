@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="350dp"
+    android:layout_marginTop="10dp"
+    app:cardElevation="5dp"
+    card_view:cardCornerRadius="4dp"
+    app:cardUseCompatPadding="true"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="10"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:background="#743D23"
+            >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="#SBDBDNFKKSGDTSD"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="14dp"
+                    ></TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="SHG Loan"
+                    android:textColor="#FFF"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textSize="14dp"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:background="#653308"
+                >
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="13"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="Applicantion Date"
+                        android:textColor="#FFF"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="2dp"
+                        ></TextView>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="0dp"
+                       android:layout_weight="1"
+                       android:text="2019-09-05"
+                       android:textColor="#FFF"
+                       android:paddingLeft="10dp"
+                       android:textStyle="bold"
+                       android:id="@+id/dates"
+                       ></TextView>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.5"></LinearLayout>
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dp"
+                        android:text="Approved Tenure"
+                        android:textColor="#FFF"
+                        ></TextView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="5 Year(s)"
+                        android:paddingLeft="10dp"
+                        android:textColor="#FFF"
+                        android:textStyle="bold"
+                        android:id="@+id/tenures"
+                        ></TextView>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"></LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:textColor="#FFF"
+                        android:layout_weight="1"
+                        android:text="Purpose(s)"
+                        android:paddingLeft="10dp"
+                        ></TextView>
+
+                    <TextView
+                        android:id="@+id/purposes"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dp"
+                        android:text="Medical"
+                        android:textColor="#FFF"
+                        android:textStyle="bold"
+                        ></TextView>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        ></LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="SHG Member Details"
+                        android:textColor="#FFF"
+                        android:paddingLeft="10dp"
+                        >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/p1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dp"
+                        android:text="Unverified"
+                        android:textColor="#00C4CC"
+                        android:textStyle="bold">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/p2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dp"
+                        android:text="Unverified"
+                        android:textColor="#00C4CC"
+                        android:textStyle="bold">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/p3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dp"
+                        android:text="Unverified"
+                        android:textColor="#00C4CC"
+                        android:textStyle="bold">
+
+                    </TextView>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:weightSum="3"
+                        android:layout_weight="1"
+                        >
+                    <TextView
+                        android:id="@+id/p4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:paddingLeft="10dp"
+                        android:text="Unverified"
+                        android:textColor="#00C4CC"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                        <TextView
+                            android:id="@+id/additional"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="+5 more"
+                            android:textColor="#00C4CC"
+                            ></TextView>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="10"
+                    android:backgroundTint="#6E2C16"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:textColor="#FFF"
+                        android:text="Approved Amount"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="2dp"
+                        >
+                    </TextView>
+                    <TextView
+                        android:id="@+id/amounts"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dp"
+                        android:text="1000000 INR"
+                        android:textColor="#FFF"
+                        android:textStyle="bold"
+
+                        >
+                    </TextView>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.8"></LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:textColor="#FFF"
+                        android:text="Approved Interest Rate"
+                        android:paddingLeft="10dp"
+                        >
+                    </TextView>
+                    <TextView
+                        android:id="@+id/interests"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dp"
+                        android:textColor="#FFF"
+                        android:textStyle="bold"
+                        tools:text="26% per annum">
+                    </TextView>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.8"
+                        ></LinearLayout>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:text="View/Edit"
+                        android:backgroundTint="#00C4CC"
+                        android:textColor="#FFF"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginLeft="5dp"
+                        ></Button>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="Begin SHG Loan >"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="7dp"
+                        android:textColor="#00C4CC"
+                        ></TextView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="EMI Schedule >"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="7dp"
+                        android:textColor="#00C4CC"
+                        ></TextView>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

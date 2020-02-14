@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.simplielend.simplilend.Home.LoansCategory;
 import com.simplielend.simplilend.R;
 
-public class SelectLoanType extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
+public class    SelectLoanType extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
 
     //var
     Spinner loanType;

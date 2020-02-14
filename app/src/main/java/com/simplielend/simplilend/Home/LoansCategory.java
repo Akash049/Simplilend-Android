@@ -11,8 +11,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.simplielend.simplilend.Forms.SelectLoanType;
+import com.simplielend.simplilend.JLG.JLGloanOptions;
 import com.simplielend.simplilend.R;
-import com.simplielend.simplilend.SHGLoanOptions;
+import com.simplielend.simplilend.SHG.SHGLoanOptions;
 
 public class LoansCategory extends AppCompatActivity implements View.OnClickListener {
 
@@ -35,6 +36,8 @@ public class LoansCategory extends AppCompatActivity implements View.OnClickList
         exit.setOnClickListener(this);
         shgLoans.setOnClickListener(this);
         consumerLoan.setOnClickListener(this);
+        jlgLoan=findViewById(R.id.jlg);
+        jlgLoan.setOnClickListener(this);
     }
 
     @Override
@@ -43,16 +46,21 @@ public class LoansCategory extends AppCompatActivity implements View.OnClickList
         switch (id){
             case R.id.consumer_loans:
                 startActivity(new Intent(LoansCategory.this, SelectLoanType.class));
-                Toast.makeText(getApplicationContext(),"Consumer/Personal Loans",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"Consumer/Personal Loans",Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.shgloans:
                 startActivity(new Intent(LoansCategory.this, SHGLoanOptions.class));
-                Toast.makeText(getApplicationContext(),"SHG Loans",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"SHG Loans",Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.exit:
                 startActivity(new Intent(LoansCategory.this,Dashboard.class));
+                break;
+
+            case R.id.jlg:
+                startActivity(new Intent(LoansCategory.this, JLGloanOptions.class));
+                Toast.makeText(getApplicationContext(),"LHG Loans",Toast.LENGTH_SHORT).show();
                 break;
         }
     }

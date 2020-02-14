@@ -71,7 +71,7 @@ public class OTPLogin extends AppCompatActivity implements View.OnClickListener 
                             //otp_process.setText("OTP sent.");
                             Toast.makeText(getApplicationContext(), "OTP sent", Toast.LENGTH_LONG).show();
                         } else {
-                            Toast.makeText(getApplicationContext(), "Server Error", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Please Insert Your Mobile Number", Toast.LENGTH_SHORT).show();
                         }
 
                     } catch (JSONException e) {

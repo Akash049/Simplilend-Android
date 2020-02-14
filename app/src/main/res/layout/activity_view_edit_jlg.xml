@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JLG.ViewEditJLG"
+    android:orientation="vertical"
+    android:weightSum="10"
+    >
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:weightSum="10">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_ham"
+                android:padding="5dp"
+                android:id="@+id/ham_icon"
+                android:tint="@color/white"
+                android:layout_height="match_parent">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="7"
+                android:text="View/Edit JLG"
+                android:textSize="22dp"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:layout_height="match_parent">
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:src="@drawable/ic_exit"
+                android:padding="10dp"
+                android:tint="@color/white"
+                android:layout_height="match_parent"
+                android:id="@+id/exit"
+                >
+
+            </ImageView>
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:id="@+id/viewjlg"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        ></androidx.recyclerview.widget.RecyclerView>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Back"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="#6E2C16"
+        android:textColor="#FFF"
+        android:id="@+id/back"
+        ></Button>
+
+
+</LinearLayout>
+
+

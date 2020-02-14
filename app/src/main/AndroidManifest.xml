@@ -12,9 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".SHGLoanOptions"
+        <activity android:name=".JLG.ViewEditJLG"
             android:theme="@style/NoActionBar"
             ></activity>
+        <activity
+            android:name=".SHG.ViewEditSHG"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".JLG.JLGloanOptions"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".SHG.SHGLoanOptions"
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".Login.ForgotPassword"
             android:theme="@style/NoActionBar" />
