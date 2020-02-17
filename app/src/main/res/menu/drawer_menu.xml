@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+    <group android:checkableBehavior="single">
+        <item
+           android:id="@+id/nav_DSA_Profile"
+           android:title="DSA Profile">
+                 </item>
+        <item
+            android:id="@+id/dashboard"
+            android:title="Dashboard">
+                 </item>
+        <item
+            android:id="@+id/current_loan"
+            android:title="Current Loan Details">
+                 </item>
+        <item
+            android:id="@+id/EMI_schedule"
+            android:title="EMI Schedule">
+        </item>
+        <item
+            android:id="@+id/payment_history"
+            android:title="Payment History">
+
+        </item>
+        <item
+            android:id="@+id/site_visit"
+            android:title="Site Visit(Office Use Only)"
+            ></item>
+        <item
+            android:id="@+id/feedback_support"
+            android:title="Feedback Support">
+
+        </item>
+
+
+    </group>
+ <item android:title="">
+    <menu>
+        <item
+            android:id="@+id/logout"
+            android:title="Logout" />
+    </menu>
+</item>
+
+</menu>
