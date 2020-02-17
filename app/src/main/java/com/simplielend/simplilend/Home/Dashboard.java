@@ -53,10 +53,10 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
         drawerItem[0] = navDataModel;
         drawerItem[1] = new NavDataModel(R.drawable.ic_person_black_24dp, "DSA Profile");
         drawerItem[2] = new NavDataModel(R.drawable.ic_dashboard_black_24dp, "Dashboard");
-        drawerItem[3] = new NavDataModel(R.drawable.ruppee, "Current Loan Details");
+        drawerItem[3] = new NavDataModel(R.drawable.ic_assignment_black_24dp, "Current Loan Details");
         drawerItem[4] = new NavDataModel(R.drawable.ic_pie_chart_black_24dp, "EMI Schedule");
         drawerItem[5] = new NavDataModel(R.drawable.ic_restore_black_24dp, "Payment History");
-        drawerItem[6] = new NavDataModel(R.drawable.ic_remove_red_eye_black_24dp, "Site Visit(Office Use Only)");
+        drawerItem[6] = new NavDataModel(R.drawable.ic_remove_red_eye_black_24dp, "Site Visit (Office Use Only)");
 
         drawerItem[7] = new NavDataModel(R.drawable.ic_announcement_black_24dp, "Feedback Support");
 
