@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Simplilend</string>
     <string name="forgot_password"><u>Forgot Password</u></string>
+    <string name="sign_up"><u>New Here? Sign Up</u></string>
 </resources>

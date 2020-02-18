@@ -20,7 +20,7 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
     //var
     TextView signinBtn, loginWithOtpBtn, forgotPasswordBtn;
     EditText emailEntry, passwordEntry;
-    TextView logotp,forgot_password;
+    TextView logotp,forgot_password,signup;
 
 
     @Override
@@ -38,6 +38,8 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
         signinBtn.setOnClickListener(this);
         emailEntry = (EditText)findViewById(R.id.email_data_entry);
         passwordEntry = (EditText)findViewById(R.id.password_data_entry);
+        signup=findViewById(R.id.signup);
+        signup.setOnClickListener(this);
         forgot_password=findViewById(R.id.forgot_password);
         forgot_password.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +70,9 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
                     Toast.makeText(getApplicationContext(),"Invalid credentials",Toast.LENGTH_SHORT).show();
                 }
                 break;
+
+            case R.id.signup:
+                startActivity(new Intent(SignIn.this,Sign_Up.class));
         }
     }
 
