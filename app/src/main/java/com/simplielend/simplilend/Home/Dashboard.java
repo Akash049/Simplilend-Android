@@ -17,6 +17,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.simplielend.simplilend.Adapters.DrawerListItemAdapter;
+import com.simplielend.simplilend.DrawerActivities.DSA_Profile;
 import com.simplielend.simplilend.Loans.Active_Loans;
 import com.simplielend.simplilend.Loans.ClosedLoans;
 import com.simplielend.simplilend.Loans.DisbursementLoans;
@@ -139,7 +140,19 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
 
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-         return;
+         selectItem(position);
+        }
+
+        private void selectItem(int position) {
+
+            switch (position)
+            {
+                case 0: break;
+
+                case 1:
+                       mDrawerLayout.closeDrawers();
+                       startActivity(new Intent(Dashboard.this, DSA_Profile.class));
+            }
         }
 
     }

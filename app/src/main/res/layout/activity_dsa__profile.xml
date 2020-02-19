@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DrawerActivities.DSA_Profile"
+    android:orientation="vertical"
+    >
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:weightSum="10">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_ham"
+                android:padding="5dp"
+                android:id="@+id/ham_icon"
+                android:tint="@color/white"
+                android:layout_height="match_parent">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="7"
+                android:text="SHG Loans: Options"
+                android:textSize="22dp"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:layout_height="match_parent">
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:src="@drawable/ic_exit"
+                android:padding="10dp"
+                android:tint="@color/white"
+                android:layout_height="match_parent"
+                android:id="@+id/exit"
+                >
+
+            </ImageView>
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+       android:layout_width="135dp"
+       android:layout_height="135dp"
+       android:layout_marginLeft="20dp"
+       android:src="@drawable/logo"
+       >
+
+   </ImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:background="#FFF"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="First Name:"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:textColor="#743D23"
+            android:background="#FFF"></TextView>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Last Name: "
+            android:gravity="center_vertical"
+            android:textColor="#743D23"
+            android:paddingLeft="10dp"
+            ></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:weightSum="2"
+        android:orientation="horizontal"
+    >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="Adwitiya"
+            android:gravity="center_vertical"></TextView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Singh"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            ></TextView>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="DSA Code:"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#743D23"
+        ></TextView>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="30dp"
+    android:gravity="center_vertical"
+    android:layout_marginLeft="20dp"
+    android:text="MIG016B"
+    ></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#743D23"
+        android:text="Email:"
+        ></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:text="MIG016B"
+        ></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#743D23"
+        android:text="Phone Number : "
+        ></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:text="MIG016B"
+        ></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#743D23"
+        android:text="Office Address: "
+        ></TextView>
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="dfsdfsdsfsfsfdfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsfsf"
+        android:gravity="center_vertical"
+
+        ></TextView>
+    <Button
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="Back To Dashboard"
+        android:background="#743D23"
+        android:textColor="#FFF"
+        android:onClick="dsaback"
+        ></Button>
+
+
+
+
+
+
+
+</LinearLayout>
