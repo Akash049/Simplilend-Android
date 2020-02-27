@@ -1,5 +1,6 @@
 package com.simplielend.simplilend.Forms;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -21,6 +22,8 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.simplielend.simplilend.Fill_in_details;
+import com.simplielend.simplilend.Loans.UnderReview;
 import com.simplielend.simplilend.R;
 
 import java.util.ArrayList;
@@ -41,6 +44,8 @@ public class PersonalLoanForm extends AppCompatActivity implements AdapterView.O
     ArrayList<EditText> sourceEditText = new ArrayList<>();
     ArrayList<EditText> incomeEditText = new ArrayList<>();
     Button add_income;
+    TextView next;
+    EditText businessname,designaton_name,address_1,pincode,total_monthly_expense;
     //Constants
     private String[] employmentTypeVal = {
             "Primary Employment Type *",
@@ -118,6 +123,19 @@ public class PersonalLoanForm extends AppCompatActivity implements AdapterView.O
         primar_income = findViewById(R.id.primary_income);
          add_income=findViewById(R.id.tot);
          viewme=findViewById(R.id.viewme);
+         next=findViewById(R.id.next);
+         businessname=findViewById(R.id.business_name);
+         designaton_name=findViewById(R.id.designaton_name);
+         address_1=findViewById(R.id.address_1);
+         pincode=findViewById(R.id.pincode);
+         total_monthly_expense=findViewById(R.id.total_monthly_expense);
+         next.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+
+                 startActivity(new Intent(PersonalLoanForm.this, Fill_in_details.class).putExtra("key",businessname.getText().toString()).putExtra("key1",designaton_name.getText().toString()).putExtra("key2",address_1.getText().toString()).putExtra("key3",pincode.getText().toString()).putExtra("key4",total_monthly_expense.getText().toString()).putExtra("key5",primar_income.getText().toString()).putExtra("key6",employmentType.getSelectedItem().toString()).putExtra("key7",officialAddressType.getSelectedItem().toString()).putExtra("key8",state.getSelectedItem().toString()).putExtra("key9",district.getSelectedItem().toString()).putExtra("key10",coApplicant.getSelectedItem().toString()).putExtra("key11",relationshipWithCoApplicant.getSelectedItem().toString()));
+             }
+         });
         add_income.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Fill_in_details"></activity>
+        <activity android:name=".Fill_in_details"
+            android:theme="@style/NoActionBar"
+            ></activity>
         <activity
             android:name=".DrawerActivities.DSA_Profile"
             android:theme="@style/NoActionBar" />

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,11 +7,68 @@
     tools:context=".Fill_in_details"
     android:orientation="vertical"
     >
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+    >
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:weightSum="10">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_back"
+                android:padding="5dp"
+                android:id="@+id/home_icon"
+                android:tint="@color/white"
+                android:layout_height="match_parent">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="8"
+                android:text="Form Details"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:layout_height="match_parent">
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_exit"
+                android:padding="5dp"
+                android:visibility="invisible"
+                android:tint="@color/white"
+                android:layout_height="match_parent">
+
+            </ImageView>
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal"
         android:weightSum="2"
+        android:layout_marginTop="20dp"
         >
         <TextView
             android:layout_width="0dp"
@@ -19,7 +76,8 @@
             android:layout_weight="1"
             android:text="Employement Type :"
             android:textColor="#000"
-            android:gravity="center"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
             >
 
         </TextView>
@@ -27,7 +85,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center"></TextView>
+            android:gravity="center"
+            android:id="@+id/empt"
+            ></TextView>
 
 
 
@@ -43,9 +103,10 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Employement Type :"
+            android:text="Employer/Business Name :"
             android:textColor="#000"
-            android:gravity="center"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
             >
 
         </TextView>
@@ -53,7 +114,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center"></TextView>
+            android:gravity="center"
+            android:id="@+id/ebname"
+            ></TextView>
 
 
 
@@ -68,9 +131,10 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Employement Type :"
+            android:text="Designation :"
             android:textColor="#000"
-            android:gravity="center"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
             >
 
         </TextView>
@@ -78,7 +142,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center"></TextView>
+            android:gravity="center"
+            android:id="@+id/desig"
+            ></TextView>
 
 
 
@@ -93,9 +159,10 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Employement Type :"
+            android:text="Address Type"
             android:textColor="#000"
-            android:gravity="center"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
             >
 
         </TextView>
@@ -103,7 +170,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center"></TextView>
+            android:gravity="center"
+            android:id="@+id/adt"
+            ></TextView>
 
 
 
@@ -117,9 +186,10 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="Employement Type :"
+        android:text="Address"
         android:textColor="#000"
-        android:gravity="center"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
         >
 
     </TextView>
@@ -127,7 +197,9 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:gravity="center"></TextView>
+        android:gravity="center"
+        android:id="@+id/ad1"
+        ></TextView>
 
 
 
@@ -141,9 +213,10 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="Employement Type :"
+        android:text="State :"
         android:textColor="#000"
-        android:gravity="center"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
         >
 
     </TextView>
@@ -151,7 +224,9 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:gravity="center"></TextView>
+        android:gravity="center"
+        android:id="@+id/st"
+        ></TextView>
 
 
 
@@ -165,9 +240,10 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="Employement Type :"
+        android:text="City :"
         android:textColor="#000"
-        android:gravity="center"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
         >
 
     </TextView>
@@ -175,7 +251,9 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:gravity="center"></TextView>
+        android:gravity="center"
+        android:id="@+id/dt"
+        ></TextView>
 
 
 
@@ -189,9 +267,10 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="Employement Type :"
+        android:text="Pincode :"
         android:textColor="#000"
-        android:gravity="center"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
         >
 
     </TextView>
@@ -199,7 +278,9 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:gravity="center"></TextView>
+        android:gravity="center"
+        android:id="@+id/pin"
+        ></TextView>
 
 
 
@@ -213,9 +294,11 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="Employement Type :"
+        android:text="Income from primary :"
         android:textColor="#000"
-        android:gravity="center"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+
         >
 
     </TextView>
@@ -223,7 +306,9 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:gravity="center"></TextView>
+        android:gravity="center"
+        android:id="@+id/pri"
+        ></TextView>
 
 
 
@@ -237,9 +322,10 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="Employement Type :"
+        android:text="Monthly Expense :"
         android:textColor="#000"
-        android:gravity="center"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
         >
 
     </TextView>
@@ -247,7 +333,9 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:gravity="center"></TextView>
+        android:gravity="center"
+        android:id="@+id/mon"
+        ></TextView>
 
 
 
@@ -261,9 +349,10 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="Employement Type :"
+        android:text="Any co-appliant :"
         android:textColor="#000"
-        android:gravity="center"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
         >
 
     </TextView>
@@ -271,7 +360,9 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:gravity="center"></TextView>
+        android:gravity="center"
+        android:id="@+id/coap"
+        ></TextView>
 
 
 
@@ -285,9 +376,10 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="Employement Type :"
+        android:text="Relation with co-appliant"
         android:textColor="#000"
-        android:gravity="center"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
         >
 
     </TextView>
@@ -295,11 +387,28 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:gravity="center"></TextView>
+        android:gravity="center"
+        android:id="@+id/rcoap"
+        ></TextView>
 
 
 
 </LinearLayout>
+       <Button
+           android:layout_width="200dp"
+           android:layout_height="wrap_content"
+           android:text="Review and Proceed"
+           android:textColor="#FFF"
+           android:layout_gravity="center"
+           android:layout_marginTop="15dp"
+           android:background="#743D23"
+           android:id="@+id/rp"
+           ></Button>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="20dp"
+           android:orientation="vertical"></LinearLayout>
 
 
 </LinearLayout>
+</ScrollView>

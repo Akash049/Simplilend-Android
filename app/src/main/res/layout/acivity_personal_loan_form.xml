@@ -285,7 +285,9 @@
                     android:text="Save and Next"
                     android:textColor="@color/white"
                     android:textSize="18dp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:clickable="true"
+                    />
 
             </LinearLayout>
 
