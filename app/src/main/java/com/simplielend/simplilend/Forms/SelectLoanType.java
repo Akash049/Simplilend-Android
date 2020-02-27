@@ -55,7 +55,7 @@ public class    SelectLoanType extends AppCompatActivity implements AdapterView.
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
-        Toast.makeText(getApplicationContext(),loanTypeValue[position] , Toast.LENGTH_LONG).show();
+      //  Toast.makeText(getApplicationContext(),loanTypeValue[position] , Toast.LENGTH_LONG).show();
     }
 
     @Override

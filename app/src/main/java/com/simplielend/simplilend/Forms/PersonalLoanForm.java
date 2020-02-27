@@ -1,22 +1,46 @@
 package com.simplielend.simplilend.Forms;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.simplielend.simplilend.R;
 
+import java.util.ArrayList;
+
 public class PersonalLoanForm extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
     //var
+    int inc1;
+    int t=0;
+    int total=0;
+    ImageView add_new_sources,delete_new_sources;
+    int textviewcount=1;
+    EditText new_source,primar_income;
+    TextView total_income,viewme;
+    LinearLayout mlayout,new_sources;
     Spinner employmentType,officialAddressType, state, city, district, otherSourceOfIncome, coApplicant, relationshipWithCoApplicant;
     ArrayAdapter employmentTypeAdapter,officialAddressTypeAdapter, stateAdapter, cityAdapter, districtAdapter, otherSourceOfIncomeAdapter, coApplicantAdapter, relationshipWithCoApplicantAdapter;
-
+    ArrayList<EditText> sourceEditText = new ArrayList<>();
+    ArrayList<EditText> incomeEditText = new ArrayList<>();
+    Button add_income;
     //Constants
     private String[] employmentTypeVal = {
             "Primary Employment Type *",
@@ -87,8 +111,155 @@ public class PersonalLoanForm extends AppCompatActivity implements AdapterView.O
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.acivity_personal_loan_form);
+        mlayout = findViewById(R.id.mlayout);
+        add_new_sources = findViewById(R.id.add_new_sources);
+        new_sources = findViewById(R.id.new_sources_container);
+        delete_new_sources = findViewById(R.id.delete_new_sources);
+        primar_income = findViewById(R.id.primary_income);
+         add_income=findViewById(R.id.tot);
+         viewme=findViewById(R.id.viewme);
+        add_income.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int summy = total+inc1;
+                if (incomeEditText.isEmpty())
+                {
+                    summy=inc1;
+                }
+
+                viewme.setText(String.valueOf(summy));
+
+
+
+            }
+        });
+
+         primar_income.addTextChangedListener(new TextWatcher() {
+             @Override
+             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+             }
+
+             @Override
+             public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+               if (s.toString().equals(""))
+               {
+                   return;
+               }
+                  inc1=Integer.parseInt(s.toString());
+
+             }
+
+             @Override
+             public void afterTextChanged(Editable s) {
+
+             }
+         });
+
+      /*   total_income.setOnTouchListener(new View.OnTouchListener() {
+             @Override
+             public boolean onTouch(View v, MotionEvent event) {
+
+                 int sum=t+inc1;
+                 total_income.setText(sum);
+                 return false;
+             }
+         });
+
+       */
+        delete_new_sources.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                int i=incomeEditText.size();
+                int f=sourceEditText.size();
+                Log.d("original size income",String.valueOf(i));
+                Log.d("original size source",String.valueOf(f));
+
+                if(incomeEditText.isEmpty()&&sourceEditText.isEmpty())
+                {
+                    return;
+                }
+               else {
+                    incomeEditText.remove(i-1);
+                    sourceEditText.remove(f-1);
+                    new_sources.removeViewAt(f-1);
+                    new_sources.removeViewAt(i - 1);
+                  Log.d("size income", String.valueOf(incomeEditText.size()));
+                  Log.d("size source",String.valueOf(incomeEditText.size()));
+                }
+
+            }
+        });
+
+
+        add_new_sources.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+//             for (i=0;i<textviewcount;i++)
+//          {
+//              final EditText [] source = new EditText[10];
+//              final EditText [] income=new EditText[10];
+
+                EditText source = new EditText(getApplicationContext());
+                sourceEditText.add(source);
+                EditText income = new EditText(getApplicationContext());
+                incomeEditText.add(income);
+
+                source.setHint("New Source");
+                source.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+                income.setHint("Income");
+                income.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+
+
+                new_sources.addView(source);
+                new_sources.addView(income);
+
+
+
+                for (int j=0;j<incomeEditText.size();j++)
+                {
+                    Log.d("value of j", String.valueOf(j));
+                    EditText ak= incomeEditText.get(j);
+                    if(!ak.getText().toString().equals(""))
+
+
+                        {
+                            int k = Integer.parseInt(ak.getText().toString());
+
+                            total = total + k;
+
+                            Log.d("value",String.valueOf(total));
+
+                        }
+
+
+                    else
+                    {
+                        return;
+                    }
+
+
+
+
+                }
+
+
+
+            }
+        });
         initialize();
+
+
     }
+
+
+
+
 
     public void initialize(){
         employmentType = (Spinner) findViewById(R.id.employment_type);
@@ -109,11 +280,6 @@ public class PersonalLoanForm extends AppCompatActivity implements AdapterView.O
         stateAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         state.setAdapter(stateAdapter);
 
-        city = (Spinner) findViewById(R.id.city);
-        city.setOnItemSelectedListener(this);
-        cityAdapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item,cityVal);
-        cityAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        city.setAdapter(cityAdapter);
 
         district = (Spinner) findViewById(R.id.district);
         district.setOnItemSelectedListener(this);

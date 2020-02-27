@@ -22,6 +22,7 @@ import com.simplielend.simplilend.Loans.Active_Loans;
 import com.simplielend.simplilend.Loans.ClosedLoans;
 import com.simplielend.simplilend.Loans.DisbursementLoans;
 import com.simplielend.simplilend.Loans.Rejected_Loans;
+import com.simplielend.simplilend.Login.SignIn;
 import com.simplielend.simplilend.Models.NavDataModel;
 import com.simplielend.simplilend.R;
 import com.simplielend.simplilend.Loans.UnderReview;
@@ -152,6 +153,12 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
                 case 1:
                        mDrawerLayout.closeDrawers();
                        startActivity(new Intent(Dashboard.this, DSA_Profile.class));
+                       break;
+
+                case 8:
+                    mDrawerLayout.closeDrawers();
+                    startActivity(new Intent(Dashboard.this, SignIn.class));
+                    break;
             }
         }
 

@@ -3,7 +3,9 @@
     android:orientation="vertical"
     android:background="@color/white"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/mlayout"
+    >
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -121,13 +123,6 @@
                 android:layout_height="50dp"
                 android:textSize="17dp"
                 style="@style/Widget.AppCompat.Spinner.Underlined"
-                android:id="@+id/city"></Spinner>
-
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:textSize="17dp"
-                style="@style/Widget.AppCompat.Spinner.Underlined"
                 android:id="@+id/district"></Spinner>
 
             <EditText
@@ -142,7 +137,9 @@
                 android:layout_height="50dp"
                 android:textSize="17dp"
                 android:hint="Total annual income from primary source*"
-                android:id="@+id/total_annual_income_from_primary"></EditText>
+                android:id="@+id/primary_income"
+                android:inputType="number"
+                ></EditText>
 
             <EditText
                 android:layout_width="match_parent"
@@ -180,7 +177,9 @@
                     android:background="@drawable/rounded_button_brown_bg"
                     android:textColor="@color/white"
                     android:textSize="20dp"
-                    android:layout_weight="2"></TextView>
+                    android:layout_weight="2"
+                    android:id="@+id/add_new_button"
+                    ></TextView>
 
                 <ImageView
                     android:layout_width="0dp"
@@ -188,7 +187,8 @@
                     android:src="@drawable/plus"
                     android:id="@+id/add_new_sources"
                     android:tint="@color/default_green"
-                    android:layout_weight="1"></ImageView>
+                    android:layout_weight="1"
+                    ></ImageView>
 
             </LinearLayout>
 
@@ -200,26 +200,35 @@
 
             </LinearLayout>
 
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:orientation="horizontal"
                 android:weightSum="4">
 
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Total Income:"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:layout_weight="2"
+                    android:textColor="#000"
+                    android:paddingLeft="10dp"
+                    android:onClick="add_income"
+                    android:id="@+id/tot"
+                    ></Button>
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:text="Add new source"
-                    android:gravity="center_vertical"
-                    android:textSize="20dp"
-                    android:layout_weight="2"></TextView>
-
-                <EditText
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:id="@+id/totol_income"
+                    android:id="@+id/viewme"
                     android:hint="Total income"
-                    android:layout_weight="2"></EditText>
+                    android:layout_weight="2"
+                    android:gravity="center"
+                      android:textSize="20dp"
+                    ></TextView>
 
             </LinearLayout>
 
@@ -237,37 +246,46 @@
                 style="@style/Widget.AppCompat.Spinner.Underlined"
                 android:id="@+id/relationship_with_co_applicant"></Spinner>
 
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Guarantor is required for this loan product" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
+                android:layout_marginTop="15dp"
                 android:orientation="horizontal"
                 android:weightSum="4">
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="2"
                     android:id="@+id/previous"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:textSize="18dp"
-                    android:textStyle="bold"
                     android:layout_margin="15dp"
-                    android:textColor="@color/white"
+                    android:layout_weight="2"
                     android:background="@drawable/rounded_button_brown_bg"
-                    android:text="Previous"/>
+                    android:gravity="center"
+                    android:text="Previous"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="2"
                     android:id="@+id/next"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:textSize="18dp"
-                    android:textStyle="bold"
                     android:layout_margin="15dp"
-                    android:textColor="@color/white"
+                    android:layout_weight="2"
                     android:background="@drawable/rounded_button_brown_bg"
-                    android:text="Save and Next"/>
+                    android:gravity="center"
+                    android:text="Save and Next"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
